@@ -5,8 +5,8 @@ CREATE PROCEDURE [dbo].[sp_UserReg]
 	,@UserName varchar(250) =NULL
 	,@Email varchar(50) =NULL
 	,@Password varchar(50)=NULL
+	,@mamun int=NULL
 )  
-
 AS  
   BEGIN  
 	IF NOT EXISTS (Select Email from tblUsers where Email=@Email)
